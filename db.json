@@ -5,6 +5,12 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1"
+    },
+    {
+      "name": "Артем",
+      "email": "artem@artem",
+      "password": "artem",
+      "id": "qwvz1uz5kwl8crljsw"
     }
   ],
   "accounts": [
@@ -22,6 +28,16 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "Наличные",
+      "user_id": "qwvz1uz5kwl8crljsw",
+      "id": "qwvz1uz63il8ct9hv1"
+    },
+    {
+      "name": "Сбербанк",
+      "user_id": "qwvz1uz5kwl8crljsw",
+      "id": "qwvz1uz6yzl8cvc6oo"
     }
   ],
   "transactions": [
@@ -159,6 +175,51 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "qwvz1uz67dl8ct9q1v",
+      "type": "income",
+      "name": "ЗП",
+      "sum": 1000000,
+      "account_id": "qwvz1uz63il8ct9hv1",
+      "user_id": "qwvz1uz5kwl8crljsw",
+      "created_at": "2022-09-22T08:47:41.346Z"
+    },
+    {
+      "id": "qwvz1uz6zcl8cvzvl7",
+      "type": "expense",
+      "name": "Еда",
+      "sum": 100000,
+      "account_id": "qwvz1uz63il8ct9hv1",
+      "user_id": "qwvz1uz5kwl8crljsw",
+      "created_at": "2022-09-22T10:04:00.810Z"
+    },
+    {
+      "id": "qwvz1uz76fl8cw1qs5",
+      "type": "income",
+      "name": "Грант",
+      "sum": 500000,
+      "account_id": "qwvz1uz6yzl8cvc6oo",
+      "user_id": "qwvz1uz5kwl8crljsw",
+      "created_at": "2022-09-22T10:05:27.892Z"
+    },
+    {
+      "id": "qwvz1uz76ml8cw2692",
+      "type": "expense",
+      "name": "Машина",
+      "sum": 58000,
+      "account_id": "qwvz1uz6yzl8cvc6oo",
+      "user_id": "qwvz1uz5kwl8crljsw",
+      "created_at": "2022-09-22T10:05:47.941Z"
+    },
+    {
+      "id": "qwvz1uz76tl8cw2leo",
+      "type": "expense",
+      "name": "Квартира",
+      "sum": 85000,
+      "account_id": "qwvz1uz6yzl8cvc6oo",
+      "user_id": "qwvz1uz5kwl8crljsw",
+      "created_at": "2022-09-22T10:06:07.583Z"
     }
   ]
 }

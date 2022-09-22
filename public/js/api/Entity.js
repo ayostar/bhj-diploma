@@ -2,8 +2,7 @@
  * Класс Entity - базовый для взаимодействия с сервером.
  * Имеет свойство URL, равно пустой строке.
  * */
- class Entity {
-  
+class Entity {
   static URL = '';
   /**
    * Запрашивает с сервера список данных.
@@ -15,7 +14,9 @@
       url: this.URL,
       data,
       method: 'GET',
-      callback
+      callback: (err, response) => {
+        callback(response);
+      },
     });
   }
 
@@ -29,7 +30,9 @@
       url: this.URL,
       data,
       method: 'PUT',
-      callback
+      callback: (err, response) => {
+        callback(response);
+      },
     });
   }
 
@@ -42,7 +45,9 @@
       url: this.URL,
       data,
       method: 'DELETE',
-      callback
+      callback: (err, response) => {
+        callback(response);
+      },
     });
   }
 }

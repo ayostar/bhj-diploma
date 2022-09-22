@@ -11,7 +11,7 @@ class Modal {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor(element){
+  constructor(element) {
     if (!element) {
       throw Error('Элемент не найден');
     }
@@ -26,9 +26,8 @@ class Modal {
    * (с помощью метода Modal.onClose)
    * */
   registerEvents() {
-
-    for (let elem of this.element.querySelectorAll('[data-dismiss="modal"]')) {
-      elem.onclick = () => this.onClose();
+    for (let el of this.element.querySelectorAll('[data-dismiss="modal"]')) {
+      el.onclick = () => this.onClose();
     }
   }
 
@@ -50,7 +49,7 @@ class Modal {
   /**
    * Закрывает окно: удаляет CSS-свойство display
    * */
-  close(){
+  close() {
     this.element.style.display = '';
   }
 }

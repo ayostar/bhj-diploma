@@ -18,15 +18,12 @@ class Sidebar {
    * при нажатии на кнопку .sidebar-toggle
    * */
   static initToggleButton() {
-    const sidebarToggle = document.querySelector('.sidebar-toggle')
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
 
     sidebarToggle.addEventListener('click', (event) => {
-      
       event.preventDefault();
 
-      const { target } = event; // получамем дискракцией значение target в массиве event
-      console.log(target)
-      console.log(event)
+      const { target } = event;
 
       App.element.classList.toggle('sidebar-open');
 
@@ -35,7 +32,6 @@ class Sidebar {
       } else {
         App.element.classList.remove('.sidebar-collapse');
       }
-
     });
   }
 
@@ -47,8 +43,7 @@ class Sidebar {
    * выходу устанавливает App.setState( 'init' )
    * */
   static initAuthLinks() {
-
-    const menuLogin = document.querySelector('.menu-item_login')
+    const menuLogin = document.querySelector('.menu-item_login');
 
     menuLogin.addEventListener('click', (event) => {
       event.preventDefault();
@@ -63,7 +58,7 @@ class Sidebar {
       App.getForm('login').element.reset();
     });
 
-    const menuRegister = document.querySelector('.menu-item_register')
+    const menuRegister = document.querySelector('.menu-item_register');
 
     menuRegister.addEventListener('click', (event) => {
       event.preventDefault();
@@ -78,17 +73,15 @@ class Sidebar {
       App.getForm('register').element.reset();
     });
 
-    const menuLogout = document.querySelector('.menu-item_logout')
+    const menuLogout = document.querySelector('.menu-item_logout');
 
     menuLogout.addEventListener('click', (event) => {
       event.preventDefault();
 
-      User.logout(response => {
-
+      User.logout((response) => {
         if (response.success) {
           App.setState('init');
         }
-
       });
     });
   }

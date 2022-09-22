@@ -39,17 +39,14 @@ class User {
       url: this.URL + '/current',
       method: 'GET',
       callback: (err, response) => {
-
         if (response.success) {
           this.setCurrent(response.user);
-
         } else {
           this.unsetCurrent();
         }
 
         callback(err, response);
-      }
-
+      },
     });
   }
 
@@ -65,13 +62,12 @@ class User {
       data,
       method: 'POST',
       callback: (err, response) => {
-
         if (response && response.user) {
           this.setCurrent(response.user);
         }
 
         callback(response);
-      }
+      },
     });
   }
 
@@ -91,7 +87,7 @@ class User {
           this.setCurrent(response.user);
         }
         callback(response);
-      }
+      },
     });
   }
 
@@ -108,7 +104,7 @@ class User {
           this.unsetCurrent();
         }
         callback(response);
-      }
+      },
     });
   }
 }
